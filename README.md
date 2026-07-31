@@ -19,6 +19,11 @@ A standalone **LibreOffice Agent Adapter** that enables AI agents to interact wi
 pip install -r requirements.txt
 ```
 
+## Package installation
+```bash
+pip install .
+```
+
 ## Usage
 ```bash
 cat docs/cli_help.txt
