@@ -1,0 +1,6 @@
+{
+  "name": "LibreOffice",
+  "description": "Adapter for LibreOffice command-line operations, enabling AI agents to automate common tasks.",
+  "version": "1.0",
+  "maintainer": "AI Engineer"
+}

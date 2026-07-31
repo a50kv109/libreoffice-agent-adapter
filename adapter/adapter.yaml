@@ -1,0 +1,8 @@
+name: LibreOffice
+description: Adapter for LibreOffice command‑line interface enabling AI agents to automate office tasks.
+program:
+  name: libreoffice
+  version: "24.2.7.2"
+adapter_version: "1.0"
+generated_by: "Manual construction using ST Builder resources"
+generated_at: "2026-07-31T19:55:00+03:00"

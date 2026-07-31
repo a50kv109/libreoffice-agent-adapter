@@ -1,0 +1,75 @@
+capabilities:
+  - name: open_document
+    description: Open one or more documents for editing.
+    cli: "-o <file1> <file2> ..."
+    notes: "Requires specifying files after -o or default behavior without -o"
+  - name: create_writer
+    description: Create a new empty Writer document.
+    cli: "--writer"
+  - name: create_calc
+    description: Create a new empty Calc spreadsheet.
+    cli: "--calc"
+  - name: create_draw
+    description: Create a new empty Draw drawing.
+    cli: "--draw"
+  - name: create_impress
+    description: Create a new empty Impress presentation.
+    cli: "--impress"
+  - name: create_math
+    description: Create a new empty Math formula document.
+    cli: "--math"
+  - name: create_base
+    description: Start the Base database wizard.
+    cli: "--base"
+  - name: export_pdf
+    description: Convert documents to PDF (headless mode).
+    cli: "--headless --convert-to pdf <files>"
+    notes: "Batch conversion; output directory can be set with --outdir"
+  - name: convert_other
+    description: Convert documents to other formats.
+    cli: "--headless --convert-to <ext>[:<filter>] <files>"
+    notes: "See --convert-to options in help/man page"
+  - name: print_to_default
+    description: Print documents to the default printer.
+    cli: "-p <files>"
+  - name: print_to_file
+    description: Print documents to files (batch).
+    cli: "--print-to-file [--printer-name <name>] [--outdir <dir>] <files>"
+  - name: view_readonly
+    description: Open documents in read‑only viewer mode.
+    cli: "--view <files>"
+  - name: show_impress
+    description: Open and run Impress presentations.
+    cli: "--show <files>"
+  - name: headless_mode
+    description: Run LibreOffice without GUI (for API control).
+    cli: "--headless"
+  - name: accept_uno
+    description: Start UNO acceptor for external API connections.
+    cli: "--accept=<connect-string>"
+  - name: unaccept_uno
+    description: Close UNO acceptor.
+    cli: "--unaccept=<connect-string|all>"
+  - name: version_info
+    description: Show LibreOffice version.
+    cli: "--version"
+  - name: help_info
+    description: Show help information.
+    cli: "--help"
+  # High‑level extensions based on practical evaluation
+  - name: list_filters
+    description: List all available conversion filters and supported output formats.
+    cli: "--headless --convert-to ?"
+    notes: "Parses the output of --convert-to help to produce a structured list."
+  - name: metadata
+    description: Retrieve document metadata (author, title, revision, etc.) via UNO.
+    cli: "--accept=socket,host=127.0.0.1,port=2002;uno_helper get-metadata <file>"
+    notes: "Uses a tiny UNO helper script (see uno_helper capability) to query properties."
+  - name: uno_helper
+    description: Start a lightweight UNO acceptor and return a connection string for further API calls.
+    cli: "--accept=socket,host=127.0.0.1,port=2002"
+    notes: "Provides a stable UNO endpoint; downstream commands can use this connection."
+  - name: graceful_terminate
+    description: Ensure a headless LibreOffice process terminates cleanly after operations.
+    cli: "--headless --terminate-after-init"
+    notes: "Prevents lingering processes after conversion or UNO usage."
