@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "libreoffice-agent-adapter"
+version = "0.1.0"
+description = "Adapter for LibreOffice to be used by AI agents."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "LibreOffice Adapter Maintainer", email = "maintainer@example.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/a50kv109/libreoffice-agent-adapter"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adapter*"]
