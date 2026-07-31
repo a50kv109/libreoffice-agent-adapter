@@ -1,0 +1,40 @@
+LibreOffice 24.2.7.2 420(Build:2)
+
+Usage: soffice [argument...]
+       argument - switches, switch parameters and document URIs (filenames).
+
+Using without special arguments:
+Opens the start center, if it is used without any arguments.
+   {file}              Tries to open the file (files) in the components
+                       suitable for them.
+   {file} {macro:///Library.Module.MacroName}
+                       Opens the file and runs specified macro from
+                       My Macros container.
+   {file} {macro://./Library.Module.MacroName}
+                       Opens the file and runs specified macro from
+                       the file.
+
+Getting help and information:
+   --help | -h | -?    Shows this help and quits.
+   --helpwriter        Opens built-in or online Help on Writer.
+   --helpcalc          Opens built-in or online Help on Calc.
+   --helpdraw          Opens built-in or online Help on Draw.
+   --helpimpress       Opens built-in or online Help on Impress.
+   --helpbase          Opens built-in or online Help on Base.
+   --helpbasic         Opens built-in or online Help on Basic scripting
+                       language.
+   --helpmath          Opens built-in or online Help on Math.
+   --version           Shows the version and quits.
+   --nstemporarydirectory
+                       (MacOS X sandbox only) Returns path of the temporary
+                       directory for the current user and exits. Overrides
+                       all other arguments. Overrides all other arguments.
+
+General arguments:
+   --quickstart[=no]   Activates[Deactivates] the Quickstarter service.
+   --nolockcheck       Disables check for remote instances using one
+                       installation.
+   --infilter={filter} Force an input filter type if possible. For example:
+                       --infilter="Calc Office Open XML"
+                       --infilter="Text (encoded):UTF8,LF,,,"
+   --pidfile={file}    Store soffice.bin pid to {file}.
